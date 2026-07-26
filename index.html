@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html language="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Cast</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <main class="conatiner">
+            <section class="weather-card">
+                <h1>Weather Cast</h1>
+                <div class="search-conatiner">
+                    <label for="city" class="sr-only">
+                        Enter City Name
+                    </label>
+                    <input type="text" id="cityInput" placeholder="Enter city" autocomplete="off">
+                    <button id="searchBtn">Search</button>
+                </div>
+
+                <div class="weather-info">
+                    <img id="weatherIcon" src="" alt="weatherIcon">
+                    <h2 id="cityName">London </h2>
+                    <h3 id="temperature"> 25°C</h3>
+                    <p id="condition"> Clear Sky</p>
+                    <p id="humidity">Humidity: 60%</p>
+                </div>
+
+                <p id="errorMessage" class="error hidden" aria-live="polite"></p>
+                <div id="loader" class="loader hidden"></div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

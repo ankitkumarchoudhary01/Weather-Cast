@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:420px;
+}
+
+.weather-card{
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    transition: .3s;
+}
+
+.weather-card:hover{
+    transform:translateY(-5px);
+}
+
+h1{
+    margin-bottom:25px;
+    color:#fff;
+}
+
+.search-container{
+    display:flex;
+    gap:10px;
+    margin-bottom:30px
+}
+
+input{
+    flex:1;
+    padding:12px;
+    border: none;
+    border-radius:10px;
+    outline:none;
+    font-size: 16px;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    background:#2563eb;
+    color:#fff;
+    transition:.3s;
+}
+button:hover{
+    background:#1d4ed8;
+}
+
+.weather-info img{
+    width:100px;
+    height:100px;
+    margin: 10px;
+}
+
+
+#cityName{
+    font-size: 28px;
+    color:#fff;
+}
+
+#temperature{
+    margin-top:10px;
+    font-size:48px;
+    color: #ffffff;
+}
+
+#condition,#humidity{
+    margin-top:10px;
+    color: #fff;
+    font-size:18px;
+}
+
+.error{
+    color:#ffdddd;
+    margin-top:20px;
+    min-height: 20px;
+}
+
+.hidden{
+    display:none;
+}
+
+.loader{
+    margin:20px auto;
+    width:40px;
+    height:40px;
+    border:4px solid white;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation:spin 0.8s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.sr-only{
+    position: absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    white-space: nowrap;
+    border:0;
+}
+
+@media(max-width:500px){
+    .search-container{
+        flex-direction:column;
+    }
+    button{
+        width:100%;
+    }
+    input{
+        width:100%;
+        margin-bottom:20px;
+    }
+    #weatherIcon{
+        margin-top:10px;
+    }
+}
