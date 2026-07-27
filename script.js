@@ -13,7 +13,7 @@ const loader = document.getElementById("loader");
 
 init();
 
-const OpenWeatherMap_API_KEY = "YOUR_API_KEY";
+const OpenWeatherMap_API_KEY = import.meta.env.OpenWeatherMap_API_KEY;
 
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 
