@@ -19,15 +19,15 @@
                     <button id="searchBtn">Search</button>
                 </div>
 
-                <div class="weather-info">
-                    <img id="weatherIcon" src="" alt="weatherIcon">
-                    <h2 id="cityName">London </h2>
-                    <h3 id="temperature"> 25°C</h3>
-                    <p id="condition"> Clear Sky</p>
-                    <p id="humidity">Humidity: 60%</p>
+                <div class="weather-info hidden" id="weatherInfo">
+                    <img id="weatherIcon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="weatherIcon">
+                    <h2 id="cityName"></h2>
+                    <h3 id="temperature"></h3>
+                    <p id="condition"></p>
+                    <p id="humidity"></p>
                 </div>
 
-                <p id="errorMessage" class="error hidden" aria-live="polite"></p>
+                <p id="errorMessage" class="error" aria-live="polite"></p>
                 <div id="loader" class="loader hidden"></div>
             </section>
         </main>
